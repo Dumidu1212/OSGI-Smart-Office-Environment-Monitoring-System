@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AirQualityConsumerBundle
+Bundle-SymbolicName: com.smartoffice.airquality.consumer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.smartoffice.airquality.consumer.AirQualityConsumerActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-22
+Automatic-Module-Name: AirQualityConsumerBundle
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.smartoffice.temperature.producer
