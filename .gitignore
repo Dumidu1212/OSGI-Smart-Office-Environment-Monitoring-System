@@ -24,28 +24,7 @@ build/
 *.out
 *.exe
 
-# 🚀 Maven / Gradle dependencies (ignore build system artifacts)
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-mvnw
-mvnw.cmd
-.gradle/
-build/
-out/
 
-# 🚀 Karaf / Equinox OSGi framework files
-karaf.data/
-data/
-felix-cache/
-configuration/
-startup.properties
-etc/*.cfg
-etc/*.properties
 
 # 🚀 Logs and temporary files
 *.log
