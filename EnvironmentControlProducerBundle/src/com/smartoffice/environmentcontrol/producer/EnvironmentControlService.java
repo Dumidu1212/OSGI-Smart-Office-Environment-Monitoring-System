@@ -1,0 +1,12 @@
+package com.smartoffice.environmentcontrol.producer;
+
+public interface EnvironmentControlService {
+
+	// Return a dynamic environment adjustment instructions
+	String adjustEnvironment();
+	
+	// Returns the desired light level as a control parameter
+	double getDesiredLightLevel();
+	
+	
+}
