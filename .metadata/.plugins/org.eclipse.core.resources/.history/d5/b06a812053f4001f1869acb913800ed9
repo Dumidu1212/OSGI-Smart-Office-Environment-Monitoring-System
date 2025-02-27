@@ -1,0 +1,43 @@
+package com.smartoffice.temperature.consumer;
+
+import com.smartoffice.lights.producer.LightService;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+public class TemperatureConsumerActivator implements BundleActivator {
+	
+	@Override
+	public void start(BundleContext context) throws Exception {
+		
+		System.out.println("Temperature Consume Bundel starting...");
+		
+		// Consume Light Service from the Light Producer Bundle
+		ServiceReference<LightService> ref = context.getServiceReference(LightService.class);
+		if (ref != null) {
+			LightService lightService = context.getService(ref);
+			if (lightService != null) {
+				double ambientLight = lightService.getAmbientLight();
+				System.out.println("Temperature Consumer: Recieved ambient linght = " + ambientLight + " lux");
+				if (ambientLight > 400) {
+					System.out.println("Temperature Consumer: Warning! High ambient light may affect sensior calibration.");
+				}
+			} else {
+				System.out.println("Temperature Consumer: LightService instance in null");
+			}
+		} else {
+			System.out.println("Temperature Consumer: LightService not available.");
+		}
+		
+	}
+
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		
+		System.out.println("Temperature Consumer Bundle stopping...");
+		
+	}
+
+	
+
+}

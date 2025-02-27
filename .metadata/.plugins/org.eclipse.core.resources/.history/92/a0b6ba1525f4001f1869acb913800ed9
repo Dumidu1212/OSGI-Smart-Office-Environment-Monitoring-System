@@ -1,0 +1,30 @@
+package com.smartoffice.temperature.producer;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+
+public class TemperatureProducerActivator implements BundleActivator {
+
+	private ServiceRegistration<TemperatureService> registration;
+	
+	@Override
+	public void start(BundleContext context) throws Exception {
+		
+		System.out.println("Temperature producer Bundle starting...");
+		
+		TemperatureService tempService = new TemperatureServiceImpl();
+		registration = context.registerService(TemperatureService.class, tempService, null);
+		System.out.println("TemperatureService registered with temperature = " + tempService.getTemperature() + " ~degree*C");
+		
+	}
+
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		System.out.println("Temperature Producer Bundle stopping...");
+		registration.unregister();
+		
+	}
+
+
+}

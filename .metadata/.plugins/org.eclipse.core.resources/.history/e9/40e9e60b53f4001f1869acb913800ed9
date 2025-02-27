@@ -1,0 +1,29 @@
+package com.smartoffice.temperature.consumer;
+
+import com.smartoffice.lights.producer.LightService;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+public class TemperatureConsumerActivator implements BundleActivator {
+	
+	@Override
+	public void start(BundleContext context) throws Exception {
+		
+		System.out.println("Temperature Consume Bundel starting...");
+		
+		// Consume Light Service from the Light Producer Bundle
+		ServiceReference<LightService> ref = context.getServiceReference(LightService.class);
+		
+		
+	}
+
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

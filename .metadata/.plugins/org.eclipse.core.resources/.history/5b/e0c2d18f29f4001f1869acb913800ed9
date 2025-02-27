@@ -1,0 +1,5 @@
+package com.smartoffice.environmentcontroll.producer;
+
+public interface EnvironmentControllService {
+
+}

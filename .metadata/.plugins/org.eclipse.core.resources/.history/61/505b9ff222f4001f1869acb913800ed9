@@ -1,0 +1,18 @@
+package com.smartoffice.temperature.producer;
+
+import java.util.Random;
+
+public class TemperatureServiceImpl implements TemperatureService {
+
+	private Random random = new Randon();
+	
+	@Override
+	public double getTemperature() {
+		
+		// Adds a dynamic temperature reading between 20 and 25 Celsius
+		double temp = 20 + random.nextDouble() * 5;
+		
+		return temp;
+	}
+
+}

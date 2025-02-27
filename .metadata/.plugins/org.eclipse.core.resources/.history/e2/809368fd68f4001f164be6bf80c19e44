@@ -1,0 +1,27 @@
+package com.smartoffice.airquality.consumer;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+public class AirQualityConsumerActivator implements BundleActivator {
+
+	@Override
+	public void start(BundleContext context) throws Exception {
+		
+		System.out.println("Air Quality Consumer Bundle starting...");
+		
+		// Consume TemperatureService from the Temperature Producer Bundle
+		ServiceReference<TemperatureService> ref = context.getServiceReference(TemperatureService.class);
+		
+	}
+
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

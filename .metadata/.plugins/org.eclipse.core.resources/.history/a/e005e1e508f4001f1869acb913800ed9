@@ -1,0 +1,16 @@
+package com.smartoffice.lights.producer;
+
+import java.util.Random;
+
+public class LightServiceImpl implements LightService {
+	
+	private Random random = new Random();
+
+	@Override
+	public double getAmbientLight() {
+		
+		// Sends a dynamic Light sensor reading between 300 and 400 Lux
+		return 300 + random.nextDouble() * 100;
+	}
+	
+}

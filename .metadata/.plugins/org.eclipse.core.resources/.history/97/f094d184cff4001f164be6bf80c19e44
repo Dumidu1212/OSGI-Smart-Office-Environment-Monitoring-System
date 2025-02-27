@@ -1,0 +1,7 @@
+package com.smartoffice.ariquality.producer;
+
+public interface AirQualityService {
+	
+	int getAirQualityIndex();
+	
+}
