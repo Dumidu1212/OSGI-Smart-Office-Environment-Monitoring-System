@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AirQualityProducerBundle
+Bundle-SymbolicName: com.smartoffice.airquality.producer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.smartoffice.airquality.producer.AirQualityProducerActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-22
+Automatic-Module-Name: AirQualityProducerBundle
+Export-Package: com.smartoffice.airquality.producer
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy

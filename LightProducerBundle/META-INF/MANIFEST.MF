@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: LightProducerBundle
+Bundle-SymbolicName: com.smartoffice.lights.producer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.smartoffice.lights.producer.LightProducerActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-22
+Automatic-Module-Name: LightProducerBundle
+Export-Package: com.smartoffice.lights.producer
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
