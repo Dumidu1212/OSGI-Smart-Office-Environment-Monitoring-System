@@ -4,6 +4,21 @@ A modular, real-time smart office system built with **Java OSGi** to monitor and
 
 ---
 
+## 📚 Contents
+
+- [🎯 Overview](#-overview)
+- [🔧 Key Features](#-key-features)
+- [⚙️ Tech Stack](#️-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+  - [🧰 Prerequisites](#-prerequisites)
+  - [🔨 Build the Bundles](#-build-the-bundles)
+  - [▶️ Run with Apache Felix](#️-run-with-apache-felix)
+- [🖥️ Simulated Output](#️-simulated-output)
+
+
+---
+
 ## 🎯 Overview
 
 This project uses the **OSGi (Open Services Gateway Initiative)** framework to create a flexible and loosely-coupled system for smart office monitoring. It demonstrates dynamic service registration, inter-bundle communication, and event-driven sensor simulation.
@@ -45,6 +60,7 @@ OSGI-Smart-Office-Environment-Monitoring-System/
 ├── pom.xml # Parent Maven build file
 └── README.md
 ```
+
 ---
 
 ## 🚀 Getting Started
@@ -85,7 +101,6 @@ install file:/path/to/display.console/target/display.console.jar
 install file:/path/to/controller.main/target/controller.main.jar
 
 start <bundle-id>  # Repeat for each installed bundle
-
 ```
 
 ---
